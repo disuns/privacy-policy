@@ -138,6 +138,22 @@
     .withdraw-table td:first-child { font-weight: 600; color: #4a3f8f; }
     a { color: #6c5ce7; text-decoration: none; }
     a:hover { text-decoration: underline; }
+    .policy-links {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #888;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+    .policy-links a {
+      background: #f0eeff;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      color: #6c5ce7;
+    }
     footer {
       text-align: center;
       margin-top: 32px;
@@ -207,35 +223,37 @@
     <div class="table-wrap">
       <table>
         <colgroup>
-          <col style="width:20%">
+          <col style="width:24%">
+          <col style="width:28%">
+          <col style="width:26%">
           <col style="width:22%">
-          <col style="width:22%">
-          <col style="width:20%">
-          <col style="width:16%">
         </colgroup>
-        <tr><th>제공받는 자</th><th>제공 항목</th><th>제공 목적</th><th>제공 시점</th><th>관련 정책</th></tr>
+        <tr><th>제공받는 자</th><th>제공 항목</th><th>제공 목적</th><th>제공 시점</th></tr>
         <tr>
           <td>Google LLC (Gemini API)</td>
           <td>약 봉지 이미지 (처리 후 즉시 삭제)</td>
           <td>AI 기반 약품 정보 자동 인식</td>
           <td>인터넷 연결 시 AI 스캔 사용 때만</td>
-          <td><a href="https://ai.google.dev/terms" target="_blank">링크</a></td>
         </tr>
         <tr>
           <td>Google LLC (Firebase)</td>
           <td>익명화된 앱 사용 데이터, 오류 로그</td>
           <td>서비스 개선 및 오류 분석</td>
           <td>앱 사용 시 자동 수집</td>
-          <td><a href="https://firebase.google.com/support/privacy" target="_blank">링크</a></td>
         </tr>
         <tr>
           <td>Google LLC (AdMob)</td>
           <td>광고 식별자 (맞춤형 광고 동의 시에만)</td>
           <td>맞춤형 광고 제공</td>
           <td>맞춤형 광고 동의 시</td>
-          <td><a href="https://support.google.com/admob/answer/6128543" target="_blank">링크</a></td>
         </tr>
       </table>
+    </div>
+    <div class="policy-links">
+      <span>각사 개인정보처리방침:</span>
+      <a href="https://ai.google.dev/terms" target="_blank">Gemini API</a>
+      <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase</a>
+      <a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob</a>
     </div>
   </section>
 
