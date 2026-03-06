@@ -2,11 +2,15 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>약스케줄러 개인정보 처리방침</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
       font-family: -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
       font-size: 15px;
       line-height: 1.8;
@@ -14,24 +18,24 @@
       background: #f8f7ff;
     }
     .container {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 40px 24px 80px;
+      max-width: 100%;
+      padding: 24px 16px 60px;
+      word-break: keep-all;
     }
     header {
       text-align: center;
-      padding: 48px 0 40px;
+      padding: 32px 0 28px;
       border-bottom: 2px solid #6c5ce7;
-      margin-bottom: 40px;
+      margin-bottom: 28px;
     }
     header h1 {
-      font-size: 26px;
+      font-size: 22px;
       font-weight: 700;
       color: #4a3f8f;
       margin-bottom: 8px;
     }
     header .app-name {
-      font-size: 17px;
+      font-size: 15px;
       color: #6c5ce7;
       font-weight: 600;
       margin-bottom: 6px;
@@ -43,24 +47,24 @@
     .intro {
       background: #fff;
       border-left: 4px solid #6c5ce7;
-      padding: 16px 20px;
+      padding: 14px 16px;
       border-radius: 0 8px 8px 0;
-      margin-bottom: 36px;
-      font-size: 14px;
+      margin-bottom: 24px;
+      font-size: 13px;
       color: #444;
     }
     section {
       background: #fff;
       border-radius: 12px;
-      padding: 28px 28px 24px;
-      margin-bottom: 20px;
+      padding: 20px 16px 18px;
+      margin-bottom: 14px;
       box-shadow: 0 1px 6px rgba(108,92,231,0.07);
     }
     section h2 {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
       color: #4a3f8f;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       padding-bottom: 10px;
       border-bottom: 1px solid #e8e4ff;
       display: flex;
@@ -70,10 +74,10 @@
     section h2 .num {
       background: #6c5ce7;
       color: #fff;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
       display: inline-flex;
       align-items: center;
@@ -81,52 +85,63 @@
       flex-shrink: 0;
     }
     h3 {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
       color: #2e2e6e;
-      margin: 18px 0 8px;
+      margin: 16px 0 8px;
     }
-    p { font-size: 14px; color: #444; margin-bottom: 10px; }
-    ul { padding-left: 20px; margin-bottom: 10px; }
-    ul li { font-size: 14px; color: #444; margin-bottom: 5px; }
+    p { font-size: 13px; color: #444; margin-bottom: 10px; }
+    ul { padding-left: 18px; margin-bottom: 10px; }
+    ul li { font-size: 13px; color: #444; margin-bottom: 5px; }
+
+    /* ── 표: 모바일 핵심 수정 ── */
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 10px 0 4px;
+    }
     table {
       width: 100%;
+      min-width: 360px;
       border-collapse: collapse;
-      font-size: 13px;
-      margin: 12px 0 4px;
+      font-size: 12px;
+      table-layout: fixed;
+      word-break: break-all;
     }
     th {
       background: #f0eeff;
       color: #4a3f8f;
       font-weight: 600;
-      padding: 9px 12px;
+      padding: 8px;
       border: 1px solid #d5cfff;
       text-align: left;
     }
     td {
-      padding: 9px 12px;
+      padding: 8px;
       border: 1px solid #e5e5e5;
       color: #444;
       vertical-align: top;
     }
     tr:nth-child(even) td { background: #fafafa; }
+
     .note {
       background: #f8f7ff;
       border: 1px solid #d5cfff;
       border-radius: 6px;
-      padding: 10px 14px;
-      font-size: 13px;
+      padding: 10px 12px;
+      font-size: 12px;
       color: #666;
       margin-top: 12px;
     }
     .note::before { content: "※ "; font-weight: 600; color: #6c5ce7; }
-    .withdraw-table td:first-child { font-weight: 600; color: #4a3f8f; min-width: 120px; }
+    .withdraw-table td:first-child { font-weight: 600; color: #4a3f8f; }
     a { color: #6c5ce7; text-decoration: none; }
     a:hover { text-decoration: underline; }
     footer {
       text-align: center;
-      margin-top: 40px;
-      padding-top: 24px;
+      margin-top: 32px;
+      padding-top: 20px;
       border-top: 1px solid #ddd;
       font-size: 12px;
       color: #aaa;
@@ -151,22 +166,37 @@
     <h2><span class="num">1</span>수집하는 개인정보 항목 및 목적</h2>
 
     <h3>① 일반 개인정보</h3>
-    <table>
-      <tr><th>수집 항목</th><th>수집 목적</th><th>보유 기간</th></tr>
-      <tr><td>기기 식별자(광고 ID)</td><td>맞춤형 광고 제공 (동의 시)</td><td>앱 삭제 시까지</td></tr>
-      <tr><td>앱 사용 로그, 오류 로그</td><td>서비스 개선 및 오류 분석 (Firebase)</td><td>앱 삭제 시까지</td></tr>
-    </table>
+    <div class="table-wrap">
+      <table>
+        <colgroup>
+          <col style="width:36%">
+          <col style="width:40%">
+          <col style="width:24%">
+        </colgroup>
+        <tr><th>수집 항목</th><th>수집 목적</th><th>보유 기간</th></tr>
+        <tr><td>기기 식별자(광고 ID)</td><td>맞춤형 광고 제공 (동의 시)</td><td>앱 삭제 시까지</td></tr>
+        <tr><td>앱 사용 로그, 오류 로그</td><td>서비스 개선 및 오류 분석 (Firebase)</td><td>앱 삭제 시까지</td></tr>
+      </table>
+    </div>
 
     <h3>② 민감정보 (건강정보) — 별도 동의</h3>
-    <table>
-      <tr><th>수집 항목</th><th>수집 목적</th><th>저장 위치</th><th>보유 기간</th></tr>
-      <tr>
-        <td>약품명, 복용 횟수, 복용 시간</td>
-        <td>복약 알람 서비스 제공</td>
-        <td>기기 내 로컬 저장<br>(외부 서버 전송 없음)</td>
-        <td>앱 내 직접 삭제 또는 앱 삭제 시까지</td>
-      </tr>
-    </table>
+    <div class="table-wrap">
+      <table>
+        <colgroup>
+          <col style="width:28%">
+          <col style="width:28%">
+          <col style="width:22%">
+          <col style="width:22%">
+        </colgroup>
+        <tr><th>수집 항목</th><th>수집 목적</th><th>저장 위치</th><th>보유 기간</th></tr>
+        <tr>
+          <td>약품명, 복용 횟수, 복용 시간</td>
+          <td>복약 알람 서비스 제공</td>
+          <td>기기 내 로컬 저장 (외부 서버 전송 없음)</td>
+          <td>앱 내 직접 삭제 또는 앱 삭제 시까지</td>
+        </tr>
+      </table>
+    </div>
     <div class="note">저장 방식이 변경될 경우 본 처리방침을 개정하고 앱 내 공지를 통해 사전 안내합니다.</div>
   </section>
 
@@ -174,30 +204,39 @@
   <section>
     <h2><span class="num">2</span>개인정보의 제3자 제공</h2>
     <p>앱은 다음 외부 서비스에 개인정보를 제공합니다.</p>
-    <table>
-      <tr><th>제공받는 자</th><th>제공 항목</th><th>제공 목적</th><th>제공 시점</th><th>관련 정책</th></tr>
-      <tr>
-        <td>Google LLC<br>(Gemini API)</td>
-        <td>약 봉지 이미지<br>(처리 후 즉시 삭제)</td>
-        <td>AI 기반 약품 정보 자동 인식</td>
-        <td>인터넷 연결 시 AI 스캔 사용 때만</td>
-        <td><a href="https://ai.google.dev/terms" target="_blank">ai.google.dev/terms</a></td>
-      </tr>
-      <tr>
-        <td>Google LLC<br>(Firebase Analytics / Crashlytics)</td>
-        <td>익명화된 앱 사용 데이터, 오류 로그</td>
-        <td>서비스 개선 및 오류 분석</td>
-        <td>앱 사용 시 자동 수집</td>
-        <td><a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></td>
-      </tr>
-      <tr>
-        <td>Google LLC<br>(AdMob)</td>
-        <td>광고 식별자<br>(맞춤형 광고 동의 시에만)</td>
-        <td>맞춤형 광고 제공</td>
-        <td>맞춤형 광고 동의 시</td>
-        <td><a href="https://support.google.com/admob/answer/6128543" target="_blank">support.google.com/admob</a></td>
-      </tr>
-    </table>
+    <div class="table-wrap">
+      <table>
+        <colgroup>
+          <col style="width:20%">
+          <col style="width:22%">
+          <col style="width:22%">
+          <col style="width:20%">
+          <col style="width:16%">
+        </colgroup>
+        <tr><th>제공받는 자</th><th>제공 항목</th><th>제공 목적</th><th>제공 시점</th><th>관련 정책</th></tr>
+        <tr>
+          <td>Google LLC (Gemini API)</td>
+          <td>약 봉지 이미지 (처리 후 즉시 삭제)</td>
+          <td>AI 기반 약품 정보 자동 인식</td>
+          <td>인터넷 연결 시 AI 스캔 사용 때만</td>
+          <td><a href="https://ai.google.dev/terms" target="_blank">링크</a></td>
+        </tr>
+        <tr>
+          <td>Google LLC (Firebase)</td>
+          <td>익명화된 앱 사용 데이터, 오류 로그</td>
+          <td>서비스 개선 및 오류 분석</td>
+          <td>앱 사용 시 자동 수집</td>
+          <td><a href="https://firebase.google.com/support/privacy" target="_blank">링크</a></td>
+        </tr>
+        <tr>
+          <td>Google LLC (AdMob)</td>
+          <td>광고 식별자 (맞춤형 광고 동의 시에만)</td>
+          <td>맞춤형 광고 제공</td>
+          <td>맞춤형 광고 동의 시</td>
+          <td><a href="https://support.google.com/admob/answer/6128543" target="_blank">링크</a></td>
+        </tr>
+      </table>
+    </div>
   </section>
 
   <!-- 제3조 -->
@@ -215,13 +254,19 @@
   <section>
     <h2><span class="num">4</span>이용자의 권리</h2>
     <p>현재 약품 복용 정보는 이용자의 기기에만 저장되며, 개발자는 해당 데이터에 접근할 수 없습니다.</p>
-    <table class="withdraw-table">
-      <tr><th>권리</th><th>행사 방법</th></tr>
-      <tr><td>수정·삭제</td><td>앱 내 약 관리 화면에서 직접 수정 및 삭제 가능</td></tr>
-      <tr><td>전체 삭제</td><td>앱 삭제 시 기기 내 저장 데이터 전체 삭제됨</td></tr>
-      <tr><td>동의 철회</td><td>앱 내 설정 화면에서 언제든지 항목별 철회 가능</td></tr>
-      <tr><td>AI 자동화 처리 이의 제기</td><td>인식 결과 화면에서 직접 수정 가능<br>추가 문의는 보호책임자 이메일로 요청</td></tr>
-    </table>
+    <div class="table-wrap">
+      <table class="withdraw-table">
+        <colgroup>
+          <col style="width:32%">
+          <col style="width:68%">
+        </colgroup>
+        <tr><th>권리</th><th>행사 방법</th></tr>
+        <tr><td>수정·삭제</td><td>앱 내 약 관리 화면에서 직접 수정 및 삭제 가능</td></tr>
+        <tr><td>전체 삭제</td><td>앱 삭제 시 기기 내 저장 데이터 전체 삭제됨</td></tr>
+        <tr><td>동의 철회</td><td>앱 내 설정 화면에서 언제든지 항목별 철회 가능</td></tr>
+        <tr><td>AI 처리 이의 제기</td><td>인식 결과 화면에서 직접 수정 가능. 추가 문의는 보호책임자 이메일로 요청</td></tr>
+      </table>
+    </div>
     <div class="note">향후 서버 저장 기능이 추가될 경우, 열람·수정·삭제 요청 절차를 처리방침 개정을 통해 별도 안내합니다.</div>
   </section>
 
@@ -229,25 +274,31 @@
   <section>
     <h2><span class="num">5</span>동의 철회 안내</h2>
     <p>이용자는 언제든지 앱 내 설정 화면에서 다음과 같이 동의를 철회할 수 있습니다.</p>
-    <table class="withdraw-table">
-      <tr><th>동의 항목</th><th>철회 시 영향</th></tr>
-      <tr>
-        <td>건강정보 처리 동의</td>
-        <td>기존 저장 데이터는 유지되며 신규 저장이 중단됩니다.<br>앱의 핵심 기능(복약 알람) 이용이 어려울 수 있습니다.</td>
-      </tr>
-      <tr>
-        <td>AI 외부 전송 동의</td>
-        <td>스캔 기능은 오프라인 OCR 방식으로만 동작합니다.</td>
-      </tr>
-      <tr>
-        <td>서비스 분석 동의</td>
-        <td>앱 기능에 영향이 없습니다.</td>
-      </tr>
-      <tr>
-        <td>맞춤형 광고 동의</td>
-        <td>비개인화 광고로 전환됩니다. 광고 자체는 유지됩니다.</td>
-      </tr>
-    </table>
+    <div class="table-wrap">
+      <table class="withdraw-table">
+        <colgroup>
+          <col style="width:32%">
+          <col style="width:68%">
+        </colgroup>
+        <tr><th>동의 항목</th><th>철회 시 영향</th></tr>
+        <tr>
+          <td>건강정보 처리 동의</td>
+          <td>기존 저장 데이터는 유지되며 신규 저장이 중단됩니다. 앱의 핵심 기능(복약 알람) 이용이 어려울 수 있습니다.</td>
+        </tr>
+        <tr>
+          <td>AI 외부 전송 동의</td>
+          <td>스캔 기능은 오프라인 OCR 방식으로만 동작합니다.</td>
+        </tr>
+        <tr>
+          <td>서비스 분석 동의</td>
+          <td>앱 기능에 영향이 없습니다.</td>
+        </tr>
+        <tr>
+          <td>맞춤형 광고 동의</td>
+          <td>비개인화 광고로 전환됩니다. 광고 자체는 유지됩니다.</td>
+        </tr>
+      </table>
+    </div>
   </section>
 
   <!-- 제6조 -->
@@ -284,27 +335,42 @@
   <section>
     <h2><span class="num">9</span>개인정보의 국외 이전</h2>
     <p>앱은 AI 스캔 기능 사용 시 약 봉지 이미지를 Google LLC(미국)의 Gemini API 서버로 전송합니다.</p>
-    <table>
-      <tr><th>이전받는 자</th><th>이전 국가</th><th>이전 항목</th><th>이전 목적</th><th>보유 기간</th></tr>
-      <tr>
-        <td>Google LLC</td>
-        <td>미국</td>
-        <td>약 봉지 이미지</td>
-        <td>AI 기반 약품 정보 자동 인식</td>
-        <td>처리 후 즉시 삭제</td>
-      </tr>
-    </table>
+    <div class="table-wrap">
+      <table>
+        <colgroup>
+          <col style="width:20%">
+          <col style="width:16%">
+          <col style="width:20%">
+          <col style="width:28%">
+          <col style="width:16%">
+        </colgroup>
+        <tr><th>이전받는 자</th><th>이전 국가</th><th>이전 항목</th><th>이전 목적</th><th>보유 기간</th></tr>
+        <tr>
+          <td>Google LLC</td>
+          <td>미국</td>
+          <td>약 봉지 이미지</td>
+          <td>AI 기반 약품 정보 자동 인식</td>
+          <td>처리 후 즉시 삭제</td>
+        </tr>
+      </table>
+    </div>
   </section>
 
   <!-- 제10조 -->
   <section>
     <h2><span class="num">10</span>개인정보 보호책임자</h2>
-    <table>
-      <tr><th>항목</th><th>정보</th></tr>
-      <tr><td>성명</td><td>최성준</td></tr>
-      <tr><td>이메일</td><td>codedevs.dev@gmail.com</td></tr>
-      <tr><td>문의 처리</td><td>이메일 접수 후 5영업일 이내 답변</td></tr>
-    </table>
+    <div class="table-wrap">
+      <table>
+        <colgroup>
+          <col style="width:30%">
+          <col style="width:70%">
+        </colgroup>
+        <tr><th>항목</th><th>정보</th></tr>
+        <tr><td>성명</td><td>최성준</td></tr>
+        <tr><td>이메일</td><td>codedevs.dev@gmail.com</td></tr>
+        <tr><td>문의 처리</td><td>이메일 접수 후 5영업일 이내 답변</td></tr>
+      </table>
+    </div>
   </section>
 
   <!-- 제11조 -->
