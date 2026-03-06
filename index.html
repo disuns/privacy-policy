@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[앱 이름] 개인정보 처리방침</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #2d2d2d;
+      background: #f8f7ff;
+    }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    header {
+      text-align: center;
+      padding: 48px 0 40px;
+      border-bottom: 2px solid #6c5ce7;
+      margin-bottom: 40px;
+    }
+    header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #4a3f8f;
+      margin-bottom: 8px;
+    }
+    header .app-name {
+      font-size: 17px;
+      color: #6c5ce7;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    header .effective-date {
+      font-size: 13px;
+      color: #888;
+    }
+    .intro {
+      background: #fff;
+      border-left: 4px solid #6c5ce7;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 36px;
+      font-size: 14px;
+      color: #444;
+    }
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 6px rgba(108,92,231,0.07);
+    }
+    section h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #4a3f8f;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e8e4ff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    section h2 .num {
+      background: #6c5ce7;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #2e2e6e;
+      margin: 18px 0 8px;
+    }
+    p { font-size: 14px; color: #444; margin-bottom: 10px; }
+    ul { padding-left: 20px; margin-bottom: 10px; }
+    ul li { font-size: 14px; color: #444; margin-bottom: 5px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 12px 0 4px;
+    }
+    th {
+      background: #f0eeff;
+      color: #4a3f8f;
+      font-weight: 600;
+      padding: 9px 12px;
+      border: 1px solid #d5cfff;
+      text-align: left;
+    }
+    td {
+      padding: 9px 12px;
+      border: 1px solid #e5e5e5;
+      color: #444;
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: #fafafa; }
+    .note {
+      background: #f8f7ff;
+      border: 1px solid #d5cfff;
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: #666;
+      margin-top: 12px;
+    }
+    .note::before { content: "※ "; font-weight: 600; color: #6c5ce7; }
+    .withdraw-table td:first-child { font-weight: 600; color: #4a3f8f; min-width: 120px; }
+    a { color: #6c5ce7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid #ddd;
+      font-size: 12px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="app-name">[앱 이름]</div>
+    <h1>개인정보 처리방침</h1>
+    <div class="effective-date">시행일: 2026년 __월 __일</div>
+  </header>
+
+  <div class="intro">
+    [앱 이름]은(는) 정보주체의 자유와 권리 보호를 위해 「개인정보 보호법」 및 관계 법령이 정한 바를 준수하며, 적법하게 개인정보를 처리하고 안전하게 관리합니다. 이에 제30조에 따라 다음과 같이 개인정보 처리방침을 수립·공개합니다.
+  </div>
+
+  <!-- 제1조 -->
+  <section>
+    <h2><span class="num">1</span>수집하는 개인정보 항목 및 목적</h2>
+
+    <h3>① 일반 개인정보</h3>
+    <table>
+      <tr><th>수집 항목</th><th>수집 목적</th><th>보유 기간</th></tr>
+      <tr><td>기기 식별자(광고 ID)</td><td>맞춤형 광고 제공 (동의 시)</td><td>앱 삭제 시까지</td></tr>
+      <tr><td>앱 사용 로그, 오류 로그</td><td>서비스 개선 및 오류 분석 (Firebase)</td><td>앱 삭제 시까지</td></tr>
+    </table>
+
+    <h3>② 민감정보 (건강정보) — 별도 동의</h3>
+    <table>
+      <tr><th>수집 항목</th><th>수집 목적</th><th>저장 위치</th><th>보유 기간</th></tr>
+      <tr>
+        <td>약품명, 복용 횟수, 복용 시간</td>
+        <td>복약 알람 서비스 제공</td>
+        <td>기기 내 로컬 저장<br>(외부 서버 전송 없음)</td>
+        <td>앱 내 직접 삭제 또는 앱 삭제 시까지</td>
+      </tr>
+    </table>
+    <div class="note">저장 방식이 변경될 경우 본 처리방침을 개정하고 앱 내 공지를 통해 사전 안내합니다.</div>
+  </section>
+
+  <!-- 제2조 -->
+  <section>
+    <h2><span class="num">2</span>개인정보의 제3자 제공</h2>
+    <p>앱은 다음 외부 서비스에 개인정보를 제공합니다.</p>
+    <table>
+      <tr><th>제공받는 자</th><th>제공 항목</th><th>제공 목적</th><th>제공 시점</th><th>관련 정책</th></tr>
+      <tr>
+        <td>Google LLC<br>(Gemini API)</td>
+        <td>약 봉지 이미지<br>(처리 후 즉시 삭제)</td>
+        <td>AI 기반 약품 정보 자동 인식</td>
+        <td>인터넷 연결 시 AI 스캔 사용 때만</td>
+        <td><a href="https://ai.google.dev/terms" target="_blank">ai.google.dev/terms</a></td>
+      </tr>
+      <tr>
+        <td>Google LLC<br>(Firebase Analytics / Crashlytics)</td>
+        <td>익명화된 앱 사용 데이터, 오류 로그</td>
+        <td>서비스 개선 및 오류 분석</td>
+        <td>앱 사용 시 자동 수집</td>
+        <td><a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></td>
+      </tr>
+      <tr>
+        <td>Google LLC<br>(AdMob)</td>
+        <td>광고 식별자<br>(맞춤형 광고 동의 시에만)</td>
+        <td>맞춤형 광고 제공</td>
+        <td>맞춤형 광고 동의 시</td>
+        <td><a href="https://support.google.com/admob/answer/6128543" target="_blank">support.google.com/admob</a></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- 제3조 -->
+  <section>
+    <h2><span class="num">3</span>AI 자동화 처리에 관한 안내</h2>
+    <p>앱은 Google Gemini AI를 통해 약 봉지 이미지를 자동 분석하여 약품명, 복용 횟수 등을 파싱합니다.</p>
+    <p>이용자는 AI 자동 처리 결과에 대해 다음 권리를 행사할 수 있습니다.</p>
+    <ul>
+      <li>처리 근거 및 방식에 대한 설명 요청</li>
+      <li>결과가 부정확한 경우 이의 제기 및 인식 결과 화면에서 직접 수정</li>
+    </ul>
+  </section>
+
+  <!-- 제4조 -->
+  <section>
+    <h2><span class="num">4</span>이용자의 권리</h2>
+    <p>현재 약품 복용 정보는 이용자의 기기에만 저장되며, 개발자는 해당 데이터에 접근할 수 없습니다.</p>
+    <table class="withdraw-table">
+      <tr><th>권리</th><th>행사 방법</th></tr>
+      <tr><td>수정·삭제</td><td>앱 내 약 관리 화면에서 직접 수정 및 삭제 가능</td></tr>
+      <tr><td>전체 삭제</td><td>앱 삭제 시 기기 내 저장 데이터 전체 삭제됨</td></tr>
+      <tr><td>동의 철회</td><td>앱 내 설정 화면에서 언제든지 항목별 철회 가능</td></tr>
+      <tr><td>AI 자동화 처리 이의 제기</td><td>인식 결과 화면에서 직접 수정 가능<br>추가 문의는 보호책임자 이메일로 요청</td></tr>
+    </table>
+    <div class="note">향후 서버 저장 기능이 추가될 경우, 열람·수정·삭제 요청 절차를 처리방침 개정을 통해 별도 안내합니다.</div>
+  </section>
+
+  <!-- 제5조 -->
+  <section>
+    <h2><span class="num">5</span>동의 철회 안내</h2>
+    <p>이용자는 언제든지 앱 내 설정 화면에서 다음과 같이 동의를 철회할 수 있습니다.</p>
+    <table class="withdraw-table">
+      <tr><th>동의 항목</th><th>철회 시 영향</th></tr>
+      <tr>
+        <td>건강정보 처리 동의</td>
+        <td>기존 저장 데이터는 유지되며 신규 저장이 중단됩니다.<br>앱의 핵심 기능(복약 알람) 이용이 어려울 수 있습니다.</td>
+      </tr>
+      <tr>
+        <td>AI 외부 전송 동의</td>
+        <td>스캔 기능은 오프라인 OCR 방식으로만 동작합니다.</td>
+      </tr>
+      <tr>
+        <td>서비스 분석 동의</td>
+        <td>앱 기능에 영향이 없습니다.</td>
+      </tr>
+      <tr>
+        <td>맞춤형 광고 동의</td>
+        <td>비개인화 광고로 전환됩니다. 광고 자체는 유지됩니다.</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- 제6조 -->
+  <section>
+    <h2><span class="num">6</span>개인정보의 안전성 확보조치</h2>
+    <ul>
+      <li>기기 내 로컬 저장 데이터는 Android 기기 보안(암호화)에 의해 보호됩니다.</li>
+      <li>약품 복용 정보는 외부 서버로 전송되지 않으며, 오직 이용자 기기 내에만 저장됩니다.</li>
+      <li>AI 스캔을 위해 전송되는 이미지는 Google Gemini API 처리 후 즉시 삭제됩니다.</li>
+    </ul>
+  </section>
+
+  <!-- 제7조 -->
+  <section>
+    <h2><span class="num">7</span>개인정보의 파기 절차 및 방법</h2>
+    <ul>
+      <li><strong>파기 절차:</strong> 이용자가 앱 내에서 직접 삭제하거나, 앱 삭제 시 자동 파기됩니다.</li>
+      <li><strong>파기 방법:</strong> 전자적 파일 형태의 정보는 복구 불가능한 방법으로 영구 삭제합니다.</li>
+    </ul>
+  </section>
+
+  <!-- 제8조 -->
+  <section>
+    <h2><span class="num">8</span>행태정보 수집 및 광고 거부 방법</h2>
+    <p>앱은 AdMob을 통해 맞춤형 광고를 제공합니다. 다음 방법으로 맞춤형 광고를 거부할 수 있습니다.</p>
+    <ul>
+      <li>Android 설정 → 개인정보 보호 → 광고 → 광고 ID 재설정 또는 삭제</li>
+      <li>앱 내 설정 화면에서 맞춤형 광고 동의 철회</li>
+    </ul>
+    <div class="note">거부 시 광고 자체가 사라지지 않으며, 비개인화 광고로 전환됩니다.</div>
+  </section>
+
+  <!-- 제9조 -->
+  <section>
+    <h2><span class="num">9</span>개인정보의 국외 이전</h2>
+    <p>앱은 AI 스캔 기능 사용 시 약 봉지 이미지를 Google LLC(미국)의 Gemini API 서버로 전송합니다.</p>
+    <table>
+      <tr><th>이전받는 자</th><th>이전 국가</th><th>이전 항목</th><th>이전 목적</th><th>보유 기간</th></tr>
+      <tr>
+        <td>Google LLC</td>
+        <td>미국</td>
+        <td>약 봉지 이미지</td>
+        <td>AI 기반 약품 정보 자동 인식</td>
+        <td>처리 후 즉시 삭제</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- 제10조 -->
+  <section>
+    <h2><span class="num">10</span>개인정보 보호책임자</h2>
+    <table>
+      <tr><th>항목</th><th>정보</th></tr>
+      <tr><td>성명</td><td>[본인 이름]</td></tr>
+      <tr><td>이메일</td><td>[본인 이메일]</td></tr>
+      <tr><td>문의 처리</td><td>이메일 접수 후 5영업일 이내 답변</td></tr>
+    </table>
+  </section>
+
+  <!-- 제11조 -->
+  <section>
+    <h2><span class="num">11</span>처리방침 변경 안내</h2>
+    <p>처리방침이 변경될 경우 앱 내 공지를 통해 시행일 7일 전부터 사전 안내합니다.</p>
+    <div class="note">수집 항목 추가, 제3자 제공 추가 등 중요한 변경의 경우 30일 전에 별도 고지합니다.</div>
+  </section>
+
+  <footer>
+    본 처리방침은 2026년 __월 __일부터 적용됩니다.<br><br>
+    [앱 이름] · [본인 이름] · [본인 이메일]
+  </footer>
+
+</div>
+</body>
+</html>
